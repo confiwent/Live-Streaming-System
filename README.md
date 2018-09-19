@@ -22,7 +22,8 @@ The parameter "<feed URL>" has got the following form:
 If you want to connect a webcam directly, you should just repalce the ```inputs``` by the webcam path, such as ```/dev/video0```.
 
 A example for this operate:
-```ffmpeg \
+```
+ffmpeg \
     -f v4l2 -s 320x240 -r 25 -i /dev/video0 \ ## video inputs
     -f alsa -ac 1 -i hw:0 \ ## audio inputs
     -c:v libx265 -crf 28 -c:a aac -b:a 128k\ ##coding
